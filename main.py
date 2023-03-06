@@ -26,4 +26,9 @@ def english_cypher(s: str, n:int) -> int:
 
 s = input()
 
-
+a = [(len(i.strip(',!.?"'))) for i in s.split()]
+lst = []
+for i in a:
+    lst.append((english_cypher(s, i)))
+for i in range(len(lst)):
+    print(lst[i].split()[i], end=' ')
